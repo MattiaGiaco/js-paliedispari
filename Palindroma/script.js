@@ -1,23 +1,21 @@
 // PALINDROMA
 
-let MiaParola = prompt('scrivi una parola')
+let MiaParola =  prompt('scrivi una parola')
 
-let palindroma = parolaContrario(MiaParola);
+let palindromoCheck = parolaContrario();
 
-if (MiaParola == palindroma){
-  console.log('palindroma')
+if (palindromoCheck == MiaParola){
+  console.log('parola palindorma');
 }else{
-  console.log('non palindroma')
+  console.log('parola non palindroma');
 }
 
-function parolaContrario(parola){
-  
-  let arrParola = [''];
 
-  for (let i=0; i<parola.lenght; i--){
-    arrParola += parola[i];
+function parolaContrario(){
+
+  let contrario = '';
+  for(let i = MiaParola.length -1; i>=0; i-- ){
+    contrario+= MiaParola[i]
   }
-  return arrParola;
-
-
+  return contrario;
 }
